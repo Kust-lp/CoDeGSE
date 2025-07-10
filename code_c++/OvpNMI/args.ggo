@@ -1,0 +1,55 @@
+# Configuration file for the automatic generation of the ONMI input options parsing
+
+package "onmi"
+version "0.3"
+
+purpose "Compare sets of clusters by their members (nodes) using various measures (NMI, Omega) and considering overlaps"
+
+usage "onmi [OPTIONS] clsfile1 clsfile2"
+option  "sync" s  "synchronize the node base omitting the non-matching nodes.
+NOTE: The node base is either the first input file or '-' (automatic selection\
+ of the input file having the least number of nodes)."
+  string  typestr="filename"
+option  "allnmis" a  "output all NMIs (sqrt and sum-denominators, LFK besides the max-denominator)"  flag off
+option  "membership" m  "average expected membership of nodes in the clusters, > 0, typically >= 1"  float default="1"
+option  "omega" o  "print the Omega measure (can be slow)"  flag off
+option  "textid" t  "use text ids of nodes instead of .cnl format"  flag off
+option  "verbose" v  "detailed debugging"  flag off
+
+args "--default-optional --unamed-opts=clusterings"   # Set opional opions, allow input files to be unnamed parameters
+
+# Basic structure, see https://www.gnu.org/software/gengetopt/gengetopt.html#Basic-Usage
+#     package "<packname>"
+#     version "<version>"
+#     purpose "<purpose>"
+#     usage "<usage>"
+#     description "<description>"
+#     versiontext "<versiontext>"
+#
+#     args "<command line options>"
+#
+#     option <long> <short> "<desc>"
+#         {details="<detailed description>"}
+#         {argtype} {typestr="<type descr>"}
+#         {values="<value1>","<value2>",...}
+#         {default="<default value>"}
+#         {dependon="<other option>"}
+#         {required} {argoptional} {multiple}
+#         {hidden}
+#
+#     option <long> <short> "<desc>" flag <on/off>
+#
+#     section "section name" {sectiondesc="optional section description"}
+#
+#     text "a textual sentence"
+#
+#
+# Mutually exclusive options should belong to a group:
+#
+#     defgroup "<group name>" {groupdesc="<group description>"} {required}
+#     groupoption <long> <short> "<desc>" <argtype> group="<group name>" \
+#          {argoptional} {multiple}
+#
+#     defgroup "my grp2"
+#     defgroup "grp1" groupdesc="an option of this group is required" required
+#     groupoption "opta" a "string a" group="grp1" multiple
