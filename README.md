@@ -10,7 +10,7 @@ cd code_py/
 python wiki_preprocess.py
 ```
 
-## X12 [2], X18 [3], X12_static ,and X18_static
+## X12 [2], X18 [3], X12_static, and X18_static
 The x12 dataset contains 68,841 annotated English tweets covering 503 different event categories, encompassing tweets over a consecutive 29-day period.
 The x18 includes 64,516 annotated French tweets covering 257 different event categories, with data spanning over a consecutive 23-day period. 
 For X12, X18, X12_static ,and X18_static netwrks, please run `tweet_preprocess.py`:
@@ -19,7 +19,7 @@ cd code_py/
 python tweet_preprocess.py
 ```
 
-## LFR_50K, LFR_100K, LFR_200K, LFR_500K, LFR_1M
+## LFR_50K, LFR_100K, LFR_200K, LFR_500K, and LFR_1M
 To generate synthetic networks, start by compiling the LFR benchmark in `code_C++/LFR-Benchmark_UndirWeightOvp-master/`  directory into an executable, and then run LFR_con.py.
 The original code address of LFR Benchmark is at [https://github.com/eXascaleInfolab/LFR-Benchmark_UndirWeightOvp](https://github.com/eXascaleInfolab/LFR-Benchmark_UndirWeightOvp).
 ```bash
