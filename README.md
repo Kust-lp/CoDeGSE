@@ -10,10 +10,10 @@ cd code_py/
 python wiki_preprocess.py
 ```
 
-## X12 [2]/X18 [3] (X12_static/X18_static)
+## X12 [2], X18 [3], X12_static ,and X18_static
 The x12 dataset contains 68,841 annotated English tweets covering 503 different event categories, encompassing tweets over a consecutive 29-day period.
 The x18 includes 64,516 annotated French tweets covering 257 different event categories, with data spanning over a consecutive 23-day period. 
-For the X12/X18 (X12_static/X18_static), please run `tweet_preprocess.py`:
+For X12, X18, X12_static ,and X18_static netwrks, please run `tweet_preprocess.py`:
 ```bash
 cd code_py/
 python tweet_preprocess.py
