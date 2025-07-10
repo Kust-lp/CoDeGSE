@@ -157,7 +157,8 @@ If you find this repository helpful, please consider citing the following paper.
 [1] Leskovec Jure. 2014. SNAP Datasets: Stanford large network dataset collection. Retrieved December 2021 from [http://snap.stanford.edu/data](http://snap.stanford.edu/data) (2014).
 
 [2] Andrew J McMinn, Yashar Moshfeghi, and Joemon M Jose. 2013. Building a large-scale corpus for evaluating event detection on twitter. In Proceedings ofthe 22nd ACM international conference on Information & Knowledge Management. ACM, 409–418.
-[3] Mazoyer B, Cagé J, Hervé N, et al. A french corpus for event detection on twitter[C]//Twelfth Language Resources and Evaluation Conference. European Language Resources Association (ELRA), 2020: 6220–6227.
+
+[3] Mazoyer, Béatrice, et al. "A french corpus for event detection on twitter." Twelfth Language Resources and Evaluation Conference. European Language Resources Association (ELRA), 2020.
 
 [4] Jaewon Yang and Jure Leskovec. 2013. Overlapping community detection at scale: a nonnegative matrix factorization approach. In Proceedings of the sixth ACM international conference on Web search and data mining. 587–596.
 
