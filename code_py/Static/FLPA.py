@@ -5,6 +5,7 @@ import xmeasures
 from cdlib import algorithms
 import networkx as nx
 from comm_utils import DATASETS
+import igraph as ig
 
 def FLPA(in_path,ground_truth,out_path,name):
     edges = []
@@ -34,11 +35,16 @@ def FLPA(in_path,ground_truth,out_path,name):
             nodes.append(b)
         edges_m.append((node_idx[a], node_idx[b]))
 
-    G = nx.Graph()
-    G.add_edges_from(edges_m, weight='weight')
+    # G = nx.Graph()
+    # G.add_edges_from(edges_m, weight='weight')
+    G = ig.Graph()
+    G.add_vertices(len(nodes))
+    G.add_edges(edges_m)
+    G.es['weight'] = weight
     start = datetime.now()
 
     pre_l = algorithms.label_propagation(G).communities
+    # pre_l = G.community_label_propagation().membership
 
     end = datetime.now()
     time_diff = end - start
@@ -55,13 +61,22 @@ def FLPA(in_path,ground_truth,out_path,name):
 
     print("gt_comm:", len(gt_comm))
 
+    pre_comm_d = {}
+    pre_label_map = [-1] * len(nodes)
 
-
-    pre_comm_d = defaultdict(list)
-    for c, ns in enumerate(pre_l):
-        pre_comm_d[c] = [nodes[n] for n in ns]
+    for n, com in enumerate(pre_l):
+        if com not in pre_comm_d:
+            pre_comm_d[com] = []
+        pre_comm_d[com].append(nodes[n])
+        pre_label_map[nodes[n]] = com
 
     pre_comm = list(pre_comm_d.values())
+
+    # pre_comm_d = defaultdict(list)
+    # for c, ns in enumerate(pre_l):
+    #     pre_comm_d[c] = [nodes[n] for n in ns]
+
+    # pre_comm = list(pre_comm_d.values())
 
     nmi = xmeasures.nmi(pre_comm, gt_comm, name)
 
