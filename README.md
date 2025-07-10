@@ -6,7 +6,7 @@ Notably, if some folders cannot be opened, please download the entire repository
 Download Amazon, YouTube, DBLP, LiveJournal, Orkut, Friendster, and Wiki datasets from [https://snap.stanford.edu/data](https://snap.stanford.edu/data), and place them in the `./data` folder.
 For Wiki, please run `wiki_preprocess.py` to update its format.
 ```bash
-cd code_python/
+cd code_py/
 python wiki_preprocess.py
 ```
 
@@ -15,7 +15,7 @@ The x12 dataset contains 68,841 annotated English tweets covering 503 different 
 The x18 includes 64,516 annotated French tweets covering 257 different event categories, with data spanning over a consecutive 23-day period. 
 For the X12/X18 (X12_static/X18_static), please run `tweet_preprocess.py`:
 ```bash
-cd code_python/
+cd code_py/
 python tweet_preprocess.py
 ```
 
@@ -26,10 +26,10 @@ The original code address of LFR Benchmark is at [https://github.com/eXascaleInf
 cd code_c++/LFR-Benchmark_UndirWeightOvp-master/
 make
 
-cd code_python/
+cd code_py/
 python LFR_con.py
 ```
-Please update the file paths for all networks in code_python/comm_utils.py
+Please update the file paths for all networks in code_py/comm_utils.py
 
 # Evaluation metrics
 ## F1 and NMI
@@ -59,7 +59,7 @@ cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-O3" ..
 make
 
-cd code_python/Static
+cd code_py/Static
 python CoDeGSE.py
 ```
 Importantly, our method is versatile and can be applied to overlapping, non-overlapping, and dynamic networks.
@@ -71,7 +71,7 @@ Compile the Bigclam into an executable file, and then run `bigclam.py`:
 cd code_c++/Snap-6.0/examples/bigclam/
 make
 
-cd code_python/Static
+cd code_py/Static
 python bigclam.py
 ```
 The original code address of Bigclam is at  [https://github.com/snap-stanford/snap](https://github.com/snap-stanford/snap).
@@ -80,14 +80,14 @@ The original code address of Bigclam is at  [https://github.com/snap-stanford/sn
 We implement this algorithm in Python3.8 with the NetworkX package in CDlib, with the number of iterations set to 21 and the filtering threshold set to 0.01. 
 The original code is available at [https://github.com/kbalasu/SLPA](https://github.com/kbalasu/SLPA).
 ```bash
-cd code_python/Static
+cd code_py/Static
 python SLPA.py
 ```
 
 ### NcGame [6]
 We implement this algorithm with python3.8 via open-source code available in the paper’s supplementary material [https://doi.org/10.1038/s41598-022-15095-9](https://doi.org/10.1038/s41598-022-15095-9).
 ```bash
-cd code_python/Static
+cd code_py/Static
 python NCGame.py
 ```
 
@@ -100,7 +100,7 @@ cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-O3" ..
 make
 
-cd code_python/Static
+cd code_py/Static
 python Fox.py
 ```
 We implement this algorithm through the open-source code provided in the paper [8].
@@ -109,28 +109,28 @@ We implement this algorithm through the open-source code provided in the paper [
 ### Louvain [9]
 We implement this algorithm in Python3.8 with API provided by igraph library, and its open-source code is available at [https://github.com/taynaud/python-louvain](https://github.com/taynaud/python-louvain).
 ```bash
-cd code_python/Static
+cd code_py/Static
 python louvain.py
 ```
 
 ### DER [10]
 We implement this algorithm in Python3.8 with the NetworkX package in CDlib, and its original code is available at [https://github.com/komarkdev/der_graph_clustering](https://github.com/komarkdev/der_graph_clustering).
 ```bash
-cd code_python/Static
+cd code_py/Static
 python DER.py
 ```
 
 ### Leiden [8]
 We implement this algorithm using open-source code available at [https://github.com/vtraag/leidenalg](https://github.com/vtraag/leidenalg).
 ```bash
-cd code_python/Static
+cd code_py/Static
 python leiden.py
 ```
 
 ### FLPA [11]
 We implement this algorithm in Python3.8 with API provided by igraph library, and its open-source code is available at [https://github.com/vtraag/igraph/tree/flpa](https://github.com/vtraag/igraph/tree/flpa).
 ```bash
-cd code_python/Static
+cd code_py/Static
 python FLPA.py
 ```
 
@@ -142,13 +142,13 @@ To run them, please update the network paths in the Java files located in the `c
 ### DCDME [15]
 We used the official code released by the authors, which can be found at [https://github.com/sunwww168/DCDME](https://github.com/sunwww168/DCDME).
 ```bash
-cd code_python/Dynamic
+cd code_py/Dynamic
 python DCDME.py
 ```
 ### DCDBFE [16]
 We used the official code released by the authors, which can be found at [https://github.com/sitiharyanti/DCDBFE_2024](https://github.com/sitiharyanti/DCDBFE_2024).
 ```bash
-cd code_python/Dynamic
+cd code_py/Dynamic
 python DCDBFE.py
 ```
 
