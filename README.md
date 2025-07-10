@@ -84,7 +84,7 @@ cd code_py/Static
 python SLPA.py
 ```
 
-### NcGame [6]
+### NCGame [6]
 We implement this algorithm with python3.8 via open-source code available in the paper’s supplementary material [https://doi.org/10.1038/s41598-022-15095-9](https://doi.org/10.1038/s41598-022-15095-9).
 ```bash
 cd code_py/Static
