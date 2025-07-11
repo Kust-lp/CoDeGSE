@@ -34,7 +34,9 @@ The relevant parameter descriptions are as follows:
 ## Note
 ### Build Requirements
 - CMake >= 3.22
+- gcc/g++ >= 9
 - Python >= 3.8
+
 
 ### data format
 The format of the input edge list is as follows:
