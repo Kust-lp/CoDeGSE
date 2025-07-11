@@ -39,7 +39,7 @@ The relevant parameter descriptions are as follows:
 
 
 ### data format
-The format of the input edge list is as follows:
+The format of the input edge list file is as follows:
 ```python-repl
    1 \t 2 \n
    1 \t 3 \n
